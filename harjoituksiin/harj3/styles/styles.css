@@ -1,0 +1,228 @@
+
+
+html {
+    margin: 0;
+    padding: 0;
+
+    background-color: #efece5;
+
+    background-image:
+        radial-gradient(circle at 12% 8%,  rgba(196, 122, 90, 0.30), transparent 40%),
+        radial-gradient(circle at 88% 22%, rgba(74, 120, 122, 0.26), transparent 44%),
+        radial-gradient(circle at 50% 96%, rgba(196, 122, 90, 0.16), transparent 46%);
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 900px;
+    min-height: 100vh;
+
+    background-color: #faf9f6;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1c1c22;
+    line-height: 1.7;
+}
+
+
+#banner {
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0;
+    padding-top: 26px;
+
+    background-color: #1f3a3b;
+    color: #faf9f6;
+    text-align: center;
+}
+
+#banner h1 {
+    margin: 0;
+    padding: 0;
+    color: #faf9f6;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+
+.nav {
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+
+    background-color: #a85f42;
+    color: #f7f5ee;
+    text-align: center;
+    font-size: 15px;
+}
+
+.nav a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav a + a::before {
+    content: "| ";
+    color: #f7f5ee;
+    margin-left: -14px;
+    margin-right: 6px;
+}
+
+.nav a:link,
+.nav a:visited {
+    color: #f7f5ee;
+    text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:active {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.nav a.nykyinen {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 34px 34px 60px;
+}
+
+h1 {
+    color: #1f3a3b;
+    text-align: center;
+    font-size: 34px;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 18px;
+    padding: 5px 14px;
+
+    background-color: #6d7d72;
+    color: #faf9f6;
+
+    text-align: left;
+    font-size: 20px;
+}
+
+
+p {
+    text-align: left;
+    max-width: 62ch;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.kasvokuva {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+a:link    { color: #4a787a; text-decoration: none; }
+a:visited { color: #4a787a; }
+a:hover   { color: #a85f42; text-decoration: underline; }
+a:active  { color: #a85f42; }
+
+
+.harrastukset {
+    list-style-type: square;
+    padding-left: 22px;
+    text-align: left;
+}
+
+.ikoni {
+    width: 18px;
+    height: 18px;
+    vertical-align: -3px;
+    margin-right: 7px;
+}
+
+h2 .osioikoni {
+    width: 22px;
+    height: 22px;
+    vertical-align: -5px;
+    margin-right: 10px;
+}
+
+.tekniikat {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    color: #6b6b75;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.linkit {
+    font-size: 15px;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+
+
+address {
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid #1c1c22;
+    padding: 5px;
+}
+
+th {
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    #banner {
+        height: 80px;
+        padding-top: 18px;
+    }
+
+    #banner h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 24px 18px 50px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .nav a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+
+    .nav a + a::before {
+        margin-left: -10px;
+        margin-right: 4px;
+    }
+}

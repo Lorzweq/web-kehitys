@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leevi Hänninen</title>
+
+    <style>
+        html {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            text-align: center;
+
+            background-color: #faf9f6;
+            background-image:
+                radial-gradient(circle at 12% 8%,  rgba(196, 122, 90, 0.28), transparent 38%),
+                radial-gradient(circle at 88% 22%, rgba(74, 120, 122, 0.24), transparent 42%),
+                radial-gradient(circle at 50% 96%, rgba(196, 122, 90, 0.14), transparent 45%);
+            background-attachment: fixed;
+
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: #1c1c22;
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 760px;
+            margin: auto;
+            padding: 70px 24px 90px;
+        }
+
+        h1 {
+            color: #1f3a3b;
+            text-align: center;
+            font-size: 42px;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            color: #a85f42;
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-indent: 2.5px;
+            margin-top: 56px;
+            margin-bottom: 18px;
+        }
+
+        p {
+            text-align: left;
+            max-width: 62ch;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .kasvokuva {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            margin-bottom: 52px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 14px;
+            font-size: 15px;
+        }
+
+        .nykyinen {
+            color: #a85f42;
+            text-decoration: underline;
+        }
+
+        a:link    { color: #4a787a; text-decoration: none; }
+        a:visited { color: #4a787a; }
+        a:hover   { color: #a85f42; text-decoration: underline; }
+        a:active  { color: #a85f42; }
+
+        /* Valikon nykyinen sivu erottuu muista */
+        nav a.nykyinen {
+            color: #a85f42;
+            text-decoration: underline;
+        }
+
+        .harrastukset {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .harrastukset a {
+            text-decoration: none;
+        }
+
+        .ikoni {
+            width: 18px;
+            height: 18px;
+            vertical-align: -3px;
+            margin-right: 7px;
+        }
+
+        address {
+            font-style: normal;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                padding: 40px 20px 60px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <img class="kasvokuva" src="images/leevi.jpg" alt="Leevi Hänninen">
+
+        <h1>Leevi Hänninen</h1>
+
+        <nav>
+            <a class="nykyinen" href="index.html">Etusivu</a>
+            <a href="harrastukset.html">Harrastukset</a>
+            <a href="portfolio.html">Portfolio</a>
+        </nav>
+
+        <p>
+            Olen Leevi Hänninen, opiskelija
+            <a href="https://www.jamk.fi">Jyväskylän ammattikorkeakoulussa</a>
+            ja opiskelen tieto- ja viestintätekniikkaa.
+        </p>
+
+        <h2>Harrastukset</h2>
+
+        <p>
+            Olen näitä harrastanut ja tykännyt tehdä <i><strong>aina</strong></i>,
+            kun on vapaata aikaa. Tässä lista harrastuksistani:
+        </p>
+
+        <ul class="harrastukset">
+            <li><a href="harrastukset.html#ohjelmointi">Ohjelmointi</a></li>
+            <li><a href="harrastukset.html#videopelit">Videopelit</a></li>
+            <li><a href="harrastukset.html#kuntosali">Kuntosali</a></li>
+        </ul>
+
+        <h2>Yhteystiedot</h2>
+
+        <address>
+            <a href="mailto:ai4010@student.jamk.fi">
+                <svg class="ikoni" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18v12H3z"/>
+                    <path d="M3 6l9 7 9-7"/>
+                </svg><strong>ai4010@student.jamk.fi</strong>
+            </a><br>
+            <a href="https://github.com/Lorzweq">
+                <svg class="ikoni" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-4.5 1.5-4.5-2.5-6.5-3"/>
+                    <path d="M15.5 21v-3.6c0-1 .3-1.7-.4-2.3 2.4-.3 4.9-1.2 4.9-5.3a4.1 4.1 0 0 0-1.1-2.9 3.8 3.8 0 0 0-.1-2.9s-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C8.3 3.7 7.4 4 7.4 4a3.8 3.8 0 0 0-.1 2.9A4.1 4.1 0 0 0 6.2 9.8c0 4.1 2.5 5 4.9 5.3-.4.4-.5.8-.5 1.4V21"/>
+                </svg>github.com/Lorzweq
+            </a>
+        </address>
+
+    </main>
+</body>
+</html>

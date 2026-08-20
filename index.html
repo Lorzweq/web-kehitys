@@ -1,23 +1,272 @@
 <!DOCTYPE html>
 <html lang="fi">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Leevi Hänninen</title>
-    </head>
-    <body style="background-color: #f0f0f0; font-family: Arial, sans-serif; margin: auto; width: 400px;">
-        <div style="background-color: blanchedalmond; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 50px;">
-            <h1 style="color: #333; margin-bottom: 10px; text-align: center;">Leevi Hänninen</h1>
-            <p>Olen Leevi Hänninen, opiskelija <a style="text-decoration: none;" href="https://www.jamk.fi">Jyväskylän ammattikorkeakoulussa</a> ja opiskelen tieto- ja viestintätekniikkaa.</p>
-            <h2>Harrastukset</h2>
-            <p>Olen näitä harrastanut ja tykännyt tehdä <i><strong>aina</strong></i>, kun on vapaata aikaa. Tässä lista harrastuksistani:</p>
-            <ul>
-                <li>Ohjelmointi</li>
-                <li>Videopelit</li>
-                <li>Kuntosali</li>
-            </ul>
-            <h2>Yhteystiedot</h2>
-            <p>Voit ottaa minuun yhteyttä sähköpostitse: <a style="text-decoration: none;" href="mailto:ai4010@student.jamk.fi"><strong>ai4010@student.jamk.fi</strong></a></p>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-kehitys — Leevi Hänninen</title>
+    <meta name="description" content="Leevi Hännisen harjoitustyöt JAMKin Web-kehitys -opintojaksolta (TT00CD79).">
+    <meta name="author" content="Leevi Hänninen">
+
+    <style>
+        html {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            text-align: center;
+
+            background-color: #faf9f6;
+            background-image:
+                radial-gradient(circle at 12% 8%,  rgba(196, 122, 90, 0.28), transparent 38%),
+                radial-gradient(circle at 88% 22%, rgba(74, 120, 122, 0.24), transparent 42%),
+                radial-gradient(circle at 50% 96%, rgba(196, 122, 90, 0.14), transparent 45%);
+            background-attachment: fixed;
+
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: #1c1c22;
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 760px;
+            margin: auto;
+            padding: 70px 24px 90px;
+        }
+
+        h1 {
+            color: #1f3a3b;
+            text-align: center;
+            font-size: 42px;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+        }
+
+        .alaotsikko {
+            color: #5c5c66;
+            font-size: 17px;
+            margin-top: 0;
+            margin-bottom: 46px;
+        }
+
+        h2 {
+            color: #a85f42;
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-indent: 2.5px;
+            margin-top: 56px;
+            margin-bottom: 22px;
+        }
+
+        .harjoitukset {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .harjoitukset li {
+            border-bottom: 1px solid #e2ded6;
+        }
+
+        .rivi {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            padding: 16px 8px;
+        }
+
+        .numero {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: #9a968e;
+            min-width: 26px;
+        }
+
+        .nimi {
+            font-weight: 700;
+            font-size: 17px;
+            min-width: 130px;
+        }
+
+        .aihe {
+            color: #5c5c66;
+            font-size: 15px;
+        }
+
+        .tulossa {
+            color: #b0aca4;
+        }
+
+        .nykyinen {
+            color: #a85f42;
+            text-decoration: underline;
+        }
+
+        .tulossa .nimi,
+        .tulossa .aihe,
+        .tulossa .numero {
+            color: #b0aca4;
+        }
+
+        a:link    { color: #4a787a; text-decoration: none; }
+        a:visited { color: #4a787a; }
+        a:hover   { color: #a85f42; text-decoration: underline; }
+        a:active  { color: #a85f42; }
+
+        .lisalinkit {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .lisalinkit li {
+            margin-bottom: 8px;
+        }
+
+        .ikoni {
+            width: 17px;
+            height: 17px;
+            vertical-align: -3px;
+            margin-right: 8px;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding-top: 20px;
+            border-top: 1px solid #e2ded6;
+            font-size: 14px;
+            color: #8a8a94;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            main {
+                padding: 40px 20px 60px;
+            }
+
+            .rivi {
+                display: block;
+                padding: 14px 4px;
+            }
+
+            .numero {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            .nimi {
+                display: inline;
+            }
+
+            .aihe {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <h1>Web-kehitys</h1>
+        <p class="alaotsikko">Leevi Hänninen · TT00CD79 · JAMK 2026</p>
+
+        <h2>Harjoitukset</h2>
+
+        <ul class="harjoitukset">
+            <li>
+                <a class="rivi" href="harjoituksiin/harj1/">
+                    <span class="numero">01</span>
+                    <span class="nimi">Harjoitus 1</span>
+                    <span class="aihe">HTML-perusteet</span>
+                </a>
+            </li>
+            <li>
+                <a class="rivi" href="harjoituksiin/harj2/">
+                    <span class="numero">02</span>
+                    <span class="nimi">Harjoitus 2</span>
+                    <span class="aihe">Tyylit ja kuvat</span>
+                </a>
+                <a class="rivi" href="harjoituksiin/harj2/taulukko.html">
+                    <span class="numero">02</span>
+                    <span class="nimi">Harjoitus 2</span>
+                    <span class="aihe">Taulukko</span>
+                </a>
+            </li>
+            </li>
+            <li>
+                <a class="rivi" href="harjoituksiin/harj3/">
+                    <span class="numero">03</span>
+                    <span class="nimi">Harjoitus 3</span>
+                    <span class="aihe">Ulkoinen tyylitiedosto</span>
+                </a>
+                <a class="rivi" href="harjoituksiin/harj3/asiakkaat_taulukko.html">
+                    <span class="numero">03</span>
+                    <span class="nimi">Harjoitus 3</span>
+                    <span class="aihe">Asiakkaat taulukko</span>
+                </a>
+            </li>
+            <li>
+                <span class="rivi tulossa">
+                    <span class="numero">04</span>
+                    <span class="nimi">Harjoitus 4</span>
+                    <span class="aihe">Box model ja kiinteä layout</span>
+                </span>
+            </li>
+            <li>
+                <span class="rivi tulossa">
+                    <span class="numero">05</span>
+                    <span class="nimi">Harjoitus 5</span>
+                    <span class="aihe">Skaalautuva layout</span>
+                </span>
+            </li>
+            <li>
+                <span class="rivi tulossa">
+                    <span class="numero">06</span>
+                    <span class="nimi">Harjoitus 6</span>
+                    <span class="aihe">Semantiikka ja kirjasimet</span>
+                </span>
+            </li>
+            <li>
+                <span class="rivi tulossa">
+                    <span class="numero">07</span>
+                    <span class="nimi">Harjoitus 7</span>
+                    <span class="aihe">Media ja kuvagalleria</span>
+                </span>
+            </li>
+            <li>
+                <span class="rivi tulossa">
+                    <span class="numero">HT</span>
+                    <span class="nimi">Harjoitustyö</span>
+                    <span class="aihe">Portfolio ja dokumentaatio</span>
+                </span>
+            </li>
+        </ul>
+
+        <h2>Muut</h2>
+
+        <ul class="lisalinkit">
+            <li>
+                <a href="https://github.com/Lorzweq">
+                    <svg class="ikoni" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 19c-4.5 1.5-4.5-2.5-6.5-3"/>
+                        <path d="M15.5 21v-3.6c0-1 .3-1.7-.4-2.3 2.4-.3 4.9-1.2 4.9-5.3a4.1 4.1 0 0 0-1.1-2.9 3.8 3.8 0 0 0-.1-2.9s-.9-.3-3 1.1a10.3 10.3 0 0 0-5.4 0C8.3 3.7 7.4 4 7.4 4a3.8 3.8 0 0 0-.1 2.9A4.1 4.1 0 0 0 6.2 9.8c0 4.1 2.5 5 4.9 5.3-.4.4-.5.8-.5 1.4V21"/>
+                    </svg>GitHub
+                </a>
+            </li>
+        </ul>
+
+        <footer>
+            Sivut on toteutettu käsin HTML:llä ja CSS:llä ilman frameworkeja.
+        </footer>
+
+    </main>
+</body>
 </html>
